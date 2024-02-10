@@ -1,0 +1,34 @@
+.animated-text-container {
+    overflow: hidden;
+  }
+  
+  .animated-text {
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideIn 1.5s forwards;
+  }
+  
+  .animated-img {
+    opacity: 0;
+    transform: translateX(100%);
+    animation: slideIn 1.5s forwards;
+  }
+  
+  @keyframes slideIn {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Your regular styles for larger screens */
+  .carousel {
+    width: 100%; /* Set a default width for larger screens */
+    /* Other styles for larger screens */
+  }
+  @media (max-width: 768px) {
+    .carousel {
+      width: 20%; /* Set a different width for smaller screens */
+      /* Other styles for smaller screens */
+    }
+  }
