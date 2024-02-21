@@ -19,7 +19,7 @@ const theme = createTheme({
   },
 
   typography: {
-    fontFamily: "IBM Plex Sans Devanagari, sans-serif",
+    fontFamily: "!Plus Jakarta Sans",
   },
   shape: {
     borderRadius: 8,

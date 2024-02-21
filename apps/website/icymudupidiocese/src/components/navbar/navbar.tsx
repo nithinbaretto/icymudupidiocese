@@ -96,12 +96,6 @@ export default function Navbar() {
                   color={item?.name === "Home" ? MAIN_THEME_COLOR : "#1B001B"}
                   fontWeight={item?.name === "Home" ? "600" : "500"}
                   textAlign="center"
-                  // sx={{
-                  //   ":hover": {
-                  //     backgroundColor: "#ffffff",
-                  //     opacity: 0.2,
-                  //   },
-                  // }}
                 >
                   {item?.name}
                 </Typography>
@@ -128,6 +122,12 @@ export default function Navbar() {
                     top: 30,
                     right: -50,
                     minWidth: 200,
+                    transition: "opacity .5s ease-out",
+                    // height:
+                    //   document.getElementById("Profile")?.style.display ===
+                    //   "block"
+                    //     ? 0
+                    //     : 0,
                   }}
                   width="100%"
                 >
