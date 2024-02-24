@@ -4,6 +4,7 @@ import BaseLayout from "../base/base_layout";
 import Navbar from "../../components/navbar/navbar";
 import { MAIN_THEME_COLOR } from "../../providers/theme/colors/colors";
 import Footer from "../../components/footer/footer";
+import Breadcrumb from "../../components/breadcrumbs/breadcrubm";
 
 export default function MainLayout({ children }: PropsWithChildren<{}>) {
   return (
@@ -29,6 +30,7 @@ export default function MainLayout({ children }: PropsWithChildren<{}>) {
         </Box>
         <Grid md={1} lg={1} />
         <Grid item md={10} lg={10} sm={12} mt={12}>
+          <Breadcrumb />
           {children}
         </Grid>
         <Grid md={1} lg={1} />

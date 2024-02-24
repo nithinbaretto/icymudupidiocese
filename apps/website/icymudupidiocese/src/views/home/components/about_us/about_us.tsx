@@ -1,10 +1,13 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function AboutUs() {
   return (
     <Box mt={4}>
-      <Typography variant="h4">About</Typography>
+      <Typography variant="h4" fontWeight={"600"}>
+        About
+      </Typography>
       <Typography variant="h5">Icym Udupi Diocese</Typography>
       <Box mt={2}>
         <Typography variant="subtitle1">
@@ -23,6 +26,12 @@ export default function AboutUs() {
           Bangalore. The church in India as a whole is divided into 13 regions
           and the Karnataka state is one such region.
         </Typography>
+
+        <Link to="about">
+          <Box display={"flex"}>
+            <Typography>Read More</Typography>
+          </Box>
+        </Link>
       </Box>
       <Box mt={4} />
     </Box>

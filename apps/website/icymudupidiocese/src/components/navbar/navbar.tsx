@@ -7,16 +7,48 @@ export default function Navbar() {
   let navItems: {
     name: string;
     path: string;
-    dropdownItems?: { name: string; path: string }[];
+    dropdownItems?: {
+      name: string;
+      path: string;
+      innerLevelDropdown?: { name: string; path: string }[];
+    }[];
   }[] = [
     { name: "Home", path: "/" },
-    { name: "About", path: "/profile" },
+    { name: "About", path: "/aboutus" },
     {
-      name: "Profile",
+      name: "Deanery News",
       path: "",
       dropdownItems: [
-        { name: "Edit", path: "/profile/edit" },
-        { name: "Settings", path: "/profile/settings" },
+        { name: "Kundapur Deanery", path: "/profile/edit" },
+        { name: "Kallianpur Deanery", path: "/profile/edit" },
+        { name: "Udupi Deanery", path: "/profile/edit" },
+        { name: "Karkol Deanery", path: "/profile/edit" },
+        { name: "Kundapur Deanery", path: "/profile/edit" },
+      ],
+    },
+    {
+      name: "Parish News",
+      path: "",
+      dropdownItems: [
+        {
+          name: "Kundapur Deanery",
+          path: "",
+          innerLevelDropdown: [
+            { name: "kundapura", path: "" },
+            { name: "Pius nagar", path: "" },
+            { name: "Koteshwar", path: "" },
+            { name: "Basrur", path: "" },
+            { name: "Kandlur", path: "" },
+            { name: "Gongolli", path: "" },
+            { name: "Trasi", path: "" },
+            { name: "Padukone", path: "" },
+            { name: "Byndoor", path: "" },
+          ],
+        },
+        { name: "Kallianpur Deanery", path: "/profile/edit" },
+        { name: "Udupi Deanery", path: "/profile/edit" },
+        { name: "Karkol Deanery", path: "/profile/edit" },
+        { name: "Kundapur Deanery", path: "/profile/edit" },
       ],
     },
     { name: "Trending", path: "/profile" },
@@ -120,14 +152,9 @@ export default function Navbar() {
                     flexDirection: "column",
                     position: "absolute",
                     top: 30,
-                    right: -50,
-                    minWidth: 200,
+                    left: -100,
+                    minWidth: 250,
                     transition: "opacity .5s ease-out",
-                    // height:
-                    //   document.getElementById("Profile")?.style.display ===
-                    //   "block"
-                    //     ? 0
-                    //     : 0,
                   }}
                   width="100%"
                 >
@@ -138,39 +165,109 @@ export default function Navbar() {
                       width: "0",
                       height: "0",
                       borderBottom: "15px solid #ffffff",
-                      borderLeft: "15px solid transparent",
+                      borderLeft: "25px solid transparent",
                       borderRight: "15px solid transparent",
                     }}
                   />
-                  <Card
-                    elevation={10}
-                    sx={{
-                      display: "flex",
-                      flex: 1,
-                      px: 2,
-                      flexDirection: "column",
-                      py: 1,
-                    }}
-                  >
-                    {item.dropdownItems?.map((dropDownItem) => {
-                      return (
-                        <Box display="flex" width={"100%"} mt={1} mb={1}>
-                          <Link
-                            to={dropDownItem?.path}
-                            style={{ textDecoration: "none", width: "100%" }}
+                  {item?.dropdownItems.length !== 0 && (
+                    <Card
+                      elevation={10}
+                      sx={{
+                        display: "flex",
+                        flex: 1,
+                        px: 2,
+                        flexDirection: "column",
+                        py: 1,
+                      }}
+                    >
+                      {item?.dropdownItems?.map((dropDownItem) => {
+                        return (
+                          <Box
+                            display="flex"
+                            width={"100%"}
+                            mt={1}
+                            mb={1}
+                            onMouseEnter={(e) => {
+                              console.log(dropDownItem);
+
+                              // handlePopoverOpen(e, dropDownItem?.name);
+                              let x = document.getElementById(
+                                dropDownItem?.name + "innerDropDown"
+                              );
+                              console.log(x, "e");
+                              if (x) {
+                                x.style.display = "block";
+                              }
+                            }}
+                            onMouseLeave={(e) => {
+                              let x = document.getElementById(
+                                dropDownItem?.name + "innerDropDown"
+                              );
+                              if (x) {
+                                x.style.display = "none";
+                              }
+                            }}
                           >
-                            <Typography
-                              variant="body2"
-                              fontSize={"18px"}
-                              color={"#1B001B"}
+                            <Link
+                              to={dropDownItem?.path}
+                              style={{ textDecoration: "none", width: "100%" }}
                             >
-                              {dropDownItem?.name}
-                            </Typography>
-                          </Link>
-                        </Box>
-                      );
-                    })}
-                  </Card>
+                              <Typography
+                                variant="body2"
+                                fontSize={"18px"}
+                                color={"#1B001B"}
+                              >
+                                {dropDownItem?.name}
+                              </Typography>
+                            </Link>
+
+                            <Box
+                              display="none"
+                              id={dropDownItem?.name + "innerDropDown"}
+                              sx={{
+                                px: 2,
+                                flexDirection: "column",
+                                position: "absolute",
+                                top: 30,
+                                left: 250,
+                                minWidth: 250,
+                                transition: "opacity .5s ease-out",
+                              }}
+                            >
+                              <Box
+                                id={item?.name}
+                                sx={{
+                                  transform: "translateX(400%)",
+                                  width: "0",
+                                  height: "0",
+                                  borderBottom: "15px solid #ffffff",
+                                  borderLeft: "25px solid transparent",
+                                  borderRight: "15px solid transparent",
+                                }}
+                              />
+                              <Card
+                                elevation={10}
+                                sx={{
+                                  display: "flex",
+                                  px: 2,
+                                  flexDirection: "column",
+                                  py: 1,
+                                }}
+                              >
+                                {dropDownItem?.innerLevelDropdown?.map(
+                                  (item) => {
+                                    return (
+                                      <Typography>{item?.name}</Typography>
+                                    );
+                                  }
+                                )}
+                              </Card>
+                            </Box>
+                          </Box>
+                        );
+                      })}
+                    </Card>
+                  )}
                 </Box>
               )}
             </Box>

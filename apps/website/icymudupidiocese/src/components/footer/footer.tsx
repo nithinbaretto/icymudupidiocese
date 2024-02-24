@@ -199,6 +199,36 @@ export default function Footer() {
             </Box>
           </Box>
         </Grid>
+        <Box
+          mt={4}
+          display="flex"
+          borderBottom={"1px solid #ffffff"}
+          width={"100%"}
+        />
+        <Grid item md={5} lg={5} sm={12}>
+          <Box mt={4}>
+            <Typography variant="subtitle1" color="#ffffff">
+              © 2023 ICYM UDUPI DIOCESE All Rights Reserved
+            </Typography>
+          </Box>
+        </Grid>
+        <Grid
+          display={"flex"}
+          item
+          md={5}
+          lg={5}
+          sm={12}
+          justifyContent={"end"}
+        >
+          <Box display={"flex"} mt={4}>
+            <Typography variant="subtitle1" color="#ffffff">
+              Privacy policy |
+            </Typography>
+            <Typography variant="subtitle1" color="#ffffff" ml={1}>
+              Terms and condition
+            </Typography>
+          </Box>
+        </Grid>
       </Grid>
     </Box>
   );
