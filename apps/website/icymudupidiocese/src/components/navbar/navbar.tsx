@@ -1,9 +1,14 @@
 import { Avatar, Box, Card, Grid, Typography } from "@mui/material";
 import React from "react";
-import { MAIN_THEME_COLOR } from "../../providers/theme/colors/colors";
-import { Link } from "react-router-dom";
+import {
+  MAIN_THEME_COLOR,
+  SECONDARY_THEME_COLOR,
+} from "../../providers/theme/colors/colors";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Navbar() {
+  const { pathname } = useLocation();
+
   let navItems: {
     name: string;
     path: string;
@@ -14,45 +19,37 @@ export default function Navbar() {
     }[];
   }[] = [
     { name: "Home", path: "/" },
-    { name: "About", path: "/aboutus" },
+    { name: "About", path: "/about" },
+    // {
+    //   name: "Deanery News",
+    //   path: "",
+    //   dropdownItems: [
+    //     { name: "Kundapur Deanery", path: "/profile/edit" },
+    //     { name: "Kallianpur Deanery", path: "/profile/edit" },
+    //     { name: "Udupi Deanery", path: "/profile/edit" },
+    //     { name: "Karkol Deanery", path: "/profile/edit" },
+    //     { name: "Kundapur Deanery", path: "/profile/edit" },
+    //   ],
+    // },
     {
-      name: "Deanery News",
-      path: "",
-      dropdownItems: [
-        { name: "Kundapur Deanery", path: "/profile/edit" },
-        { name: "Kallianpur Deanery", path: "/profile/edit" },
-        { name: "Udupi Deanery", path: "/profile/edit" },
-        { name: "Karkol Deanery", path: "/profile/edit" },
-        { name: "Kundapur Deanery", path: "/profile/edit" },
-      ],
-    },
-    {
-      name: "Parish News",
+      name: "Deanery & Parish News",
       path: "",
       dropdownItems: [
         {
           name: "Kundapur Deanery",
           path: "",
           innerLevelDropdown: [
-            { name: "kundapura", path: "" },
-            { name: "Pius nagar", path: "" },
-            { name: "Koteshwar", path: "" },
-            { name: "Basrur", path: "" },
-            { name: "Kandlur", path: "" },
-            { name: "Gongolli", path: "" },
-            { name: "Trasi", path: "" },
-            { name: "Padukone", path: "" },
-            { name: "Byndoor", path: "" },
+            { name: "Deanery Director & Commitee", path: "/parishes" },
+            { name: "Parishes", path: "/parishes" },
           ],
         },
         { name: "Kallianpur Deanery", path: "/profile/edit" },
         { name: "Udupi Deanery", path: "/profile/edit" },
         { name: "Karkol Deanery", path: "/profile/edit" },
-        { name: "Kundapur Deanery", path: "/profile/edit" },
       ],
     },
     { name: "Trending", path: "/profile" },
-    { name: "Programmes", path: "/profile" },
+    // { name: "Programmes", path: "/profile" },
   ];
 
   const handlePopoverOpen = (
@@ -98,6 +95,7 @@ export default function Navbar() {
         lg={8}
         sm={12}
         justifyContent={"center"}
+        alignItems={"center"}
       >
         {navItems?.map((item) => {
           return (
@@ -124,9 +122,18 @@ export default function Navbar() {
                 }}
               >
                 <Typography
-                  fontSize={"18px"}
-                  color={item?.name === "Home" ? MAIN_THEME_COLOR : "#1B001B"}
-                  fontWeight={item?.name === "Home" ? "600" : "500"}
+                  color={
+                    pathname?.includes(item?.name.toLowerCase()) ||
+                    item?.name === "Home"
+                      ? MAIN_THEME_COLOR
+                      : "#1B001B"
+                  }
+                  fontWeight={
+                    pathname?.includes(item?.name?.toLowerCase()) ||
+                    item?.name === "Home"
+                      ? "600"
+                      : "500"
+                  }
                   textAlign="center"
                 >
                   {item?.name}
@@ -214,8 +221,13 @@ export default function Navbar() {
                             >
                               <Typography
                                 variant="body2"
-                                fontSize={"18px"}
+                                pl={2}
                                 color={"#1B001B"}
+                                sx={{
+                                  ":hover": {
+                                    borderLeft: `3px solid ${SECONDARY_THEME_COLOR}`,
+                                  },
+                                }}
                               >
                                 {dropDownItem?.name}
                               </Typography>
@@ -229,27 +241,16 @@ export default function Navbar() {
                                 flexDirection: "column",
                                 position: "absolute",
                                 top: 30,
-                                left: 250,
+                                left: 220,
                                 minWidth: 250,
                                 transition: "opacity .5s ease-out",
                               }}
                             >
-                              <Box
-                                id={item?.name}
-                                sx={{
-                                  transform: "translateX(400%)",
-                                  width: "0",
-                                  height: "0",
-                                  borderBottom: "15px solid #ffffff",
-                                  borderLeft: "25px solid transparent",
-                                  borderRight: "15px solid transparent",
-                                }}
-                              />
                               <Card
                                 elevation={10}
                                 sx={{
                                   display: "flex",
-                                  px: 2,
+                                  px: 1,
                                   flexDirection: "column",
                                   py: 1,
                                 }}
@@ -257,7 +258,27 @@ export default function Navbar() {
                                 {dropDownItem?.innerLevelDropdown?.map(
                                   (item) => {
                                     return (
-                                      <Typography>{item?.name}</Typography>
+                                      <Link
+                                        to={item?.path}
+                                        style={{
+                                          textDecoration: "none",
+                                          color: "inherit",
+                                        }}
+                                      >
+                                        <Typography
+                                          variant="body2"
+                                          my={1}
+                                          pl={2}
+                                          sx={{
+                                            cursor: "pointer",
+                                            ":hover": {
+                                              borderLeft: `3px solid ${SECONDARY_THEME_COLOR}`,
+                                            },
+                                          }}
+                                        >
+                                          {item?.name}
+                                        </Typography>
+                                      </Link>
                                     );
                                   }
                                 )}

@@ -45,6 +45,7 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           borderRadius: 8,
+          boxShadow: "rgba(27, 0, 27, 0.15) 0px 2px 10px 0px",
         },
       },
     },
@@ -68,6 +69,14 @@ const theme = createTheme({
       defaultProps: {
         primaryTypographyProps: {
           variant: "body1",
+        },
+      },
+    },
+
+    MuiLink: {
+      styleOverrides: {
+        root: {
+          textDecoration: "none",
         },
       },
     },

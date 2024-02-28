@@ -3,6 +3,7 @@ import Home from "../views/home/home";
 import Profile from "../views/profile/profile";
 import AboutUs from "../views/about/about_us";
 import News from "../views/news/news";
+import ParishListing from "../views/parish_listing/parish_listing";
 
 export const routes = [
   {
@@ -16,14 +17,19 @@ export const routes = [
     title: "Profile",
   },
   {
-    path: "/aboutus",
+    path: "/about",
     element: <AboutUs />,
-    title: "About us",
+    title: "About",
   },
   {
     path: "/news",
     element: <News />,
     title: "News",
+  },
+  {
+    path: "/parishes",
+    element: <ParishListing />,
+    title: "Parish",
   },
 ];
 

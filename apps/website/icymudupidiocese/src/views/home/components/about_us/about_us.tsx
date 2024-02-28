@@ -1,6 +1,8 @@
+import { ArrowRightAlt } from "@mui/icons-material";
 import { Box, Typography } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
+import { SECONDARY_THEME_COLOR } from "../../../../providers/theme/colors/colors";
 
 export default function AboutUs() {
   return (
@@ -26,12 +28,19 @@ export default function AboutUs() {
           Bangalore. The church in India as a whole is divided into 13 regions
           and the Karnataka state is one such region.
         </Typography>
-
-        <Link to="about">
-          <Box display={"flex"}>
-            <Typography>Read More</Typography>
-          </Box>
-        </Link>
+        <Box
+          display={"flex"}
+          mt={1}
+          borderBottom={`3px solid ${SECONDARY_THEME_COLOR}`}
+          width={"fit-content"}
+          onClick={() => {}}
+          sx={{ cursor: "pointer" }}
+        >
+          <Typography variant="body2" fontWeight={"600"}>
+            Read more
+          </Typography>
+          <ArrowRightAlt />
+        </Box>
       </Box>
       <Box mt={4} />
     </Box>
