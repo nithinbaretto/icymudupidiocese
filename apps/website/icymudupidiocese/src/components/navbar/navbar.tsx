@@ -5,6 +5,7 @@ import {
   SECONDARY_THEME_COLOR,
 } from "../../providers/theme/colors/colors";
 import { Link, useLocation } from "react-router-dom";
+import "./style.css";
 
 export default function Navbar() {
   const { pathname } = useLocation();
@@ -32,7 +33,7 @@ export default function Navbar() {
     //   ],
     // },
     {
-      name: "Deanery & Parish News",
+      name: "Deanery & Parish",
       path: "",
       dropdownItems: [
         {
@@ -48,8 +49,8 @@ export default function Navbar() {
         { name: "Karkol Deanery", path: "/profile/edit" },
       ],
     },
-    { name: "Trending", path: "/profile" },
-    // { name: "Programmes", path: "/profile" },
+    { name: "News", path: "/profile" },
+    { name: "Dexco", path: "/profile" },
   ];
 
   const handlePopoverOpen = (
@@ -151,6 +152,7 @@ export default function Navbar() {
               </Link>
               {item?.dropdownItems && (
                 <Box
+                  className="animated-dropdown-container"
                   display={"none"}
                   id={item?.name}
                   zIndex={999}
@@ -192,16 +194,16 @@ export default function Navbar() {
                           <Box
                             display="flex"
                             width={"100%"}
-                            mt={1}
-                            mb={1}
+                            sx={{
+                              ":hover": {
+                                borderLeft: `3px solid ${SECONDARY_THEME_COLOR}`,
+                                backgroundColor: "#F1F2F4",
+                              },
+                            }}
                             onMouseEnter={(e) => {
-                              console.log(dropDownItem);
-
-                              // handlePopoverOpen(e, dropDownItem?.name);
                               let x = document.getElementById(
                                 dropDownItem?.name + "innerDropDown"
                               );
-                              console.log(x, "e");
                               if (x) {
                                 x.style.display = "block";
                               }
@@ -223,11 +225,8 @@ export default function Navbar() {
                                 variant="body2"
                                 pl={2}
                                 color={"#1B001B"}
-                                sx={{
-                                  ":hover": {
-                                    borderLeft: `3px solid ${SECONDARY_THEME_COLOR}`,
-                                  },
-                                }}
+                                mt={1}
+                                mb={1}
                               >
                                 {dropDownItem?.name}
                               </Typography>

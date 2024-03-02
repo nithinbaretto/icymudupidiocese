@@ -1,6 +1,8 @@
+import { ArrowRightAlt } from "@mui/icons-material";
 import { Box, Button, Card, Grid, Typography } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
+import { SECONDARY_THEME_COLOR } from "../../../../providers/theme/colors/colors";
 
 export default function TrendingNews() {
   let news = [
@@ -35,7 +37,19 @@ export default function TrendingNews() {
         <Typography variant="h4" fontWeight={"600"}>
           Trending news
         </Typography>
-        <Button>View all news</Button>
+        <Box
+          display={"flex"}
+          mt={1}
+          borderBottom={`3px solid ${SECONDARY_THEME_COLOR}`}
+          width={"fit-content"}
+          onClick={() => {}}
+          sx={{ cursor: "pointer" }}
+        >
+          <Typography variant="body2" fontWeight={"600"}>
+            View all news
+          </Typography>
+          <ArrowRightAlt />
+        </Box>
       </Box>
       <Grid container spacing={3}>
         {news.map((item) => {
