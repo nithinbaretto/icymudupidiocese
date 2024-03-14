@@ -22,7 +22,6 @@ export default function DexcoInformation(this: any) {
       slidesToSlide: 1, // optional, default to 1.
     },
   };
-  let item = [1, 2, 3, 4, 534, 345, 342, 32, 453, 53534, 234, 2343];
   let itemList = [
     { id: 1, img: "https://www.kryc.org/img/Vileena_Gonsalves.jpg" },
     { id: 1, img: "https://www.kryc.org/img/Yeshappa.jpg" },
@@ -38,7 +37,7 @@ export default function DexcoInformation(this: any) {
     { id: 1, img: "https://www.kryc.org/img/Ashley_Dsouza.jpg" },
   ];
   return (
-    <Box mb={4}>
+    <Box mb={4} id="dexcoInfo">
       <Box mb={3}>
         <Typography variant="h4" fontWeight={"600"}>
           ICYM DEXCO

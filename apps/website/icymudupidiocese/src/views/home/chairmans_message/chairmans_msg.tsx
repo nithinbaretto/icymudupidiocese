@@ -68,6 +68,7 @@ export default function ChairmansMsg() {
               src={"https://www.udupidiocese.in/images/stories/bishop.jpg"}
               alt=""
               height={500}
+              style={{ borderRadius: 15 }}
             />
           </Box>
         </Grid>
