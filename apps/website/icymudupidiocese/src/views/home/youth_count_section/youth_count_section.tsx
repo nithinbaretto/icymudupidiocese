@@ -11,7 +11,7 @@ export default function YouthCountSection() {
           Youth Engagement Metrics
         </Typography>
       </Box>
-      <Grid container spacing={3} mt={1} mb={3}>
+      <Grid container spacing={6} mt={1} mb={3}>
         <Grid item md={4} lg={4} sm={12}>
           <Box
             display={"flex"}
@@ -23,7 +23,9 @@ export default function YouthCountSection() {
             justifyContent={"center"}
           >
             <Box>
-              <Typography variant="h5">Total Youth Count</Typography>
+              <Typography variant="h5" fontWeight={"500"}>
+                Total Youth Count
+              </Typography>
             </Box>
             <Box mt={2}>
               <Typography variant="h5">1000</Typography>
@@ -42,7 +44,9 @@ export default function YouthCountSection() {
             justifyContent={"center"}
           >
             <Box>
-              <Typography variant="h5">Active Youth Count</Typography>
+              <Typography variant="h5" fontWeight={"500"}>
+                Active Youth Count
+              </Typography>
             </Box>
             <Box mt={2}>
               <Typography variant="h5">1000</Typography>
@@ -60,7 +64,9 @@ export default function YouthCountSection() {
             minHeight={200}
           >
             <Box>
-              <Typography variant="h5">InActive Youth Count</Typography>
+              <Typography variant="h5" fontWeight={"500"}>
+                InActive Youth Count
+              </Typography>
             </Box>
             <Box mt={2}>
               <Typography variant="h5">1000</Typography>

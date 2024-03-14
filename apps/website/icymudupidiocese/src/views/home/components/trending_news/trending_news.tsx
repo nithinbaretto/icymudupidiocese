@@ -35,7 +35,7 @@ export default function TrendingNews() {
     <Box mb={6} mt={8}>
       <Box mb={2} display={"flex"} justifyContent={"space-between"}>
         <Typography variant="h4" fontWeight={"600"}>
-          Trending news
+          Latest news
         </Typography>
         <Box
           display={"flex"}
