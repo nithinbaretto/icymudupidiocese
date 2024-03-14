@@ -68,6 +68,7 @@ export default function DirectorMsg() {
               src={"https://kryc.org/img/Steevan_Fernandes.jpeg"}
               alt=""
               height={500}
+              style={{ borderRadius: 15 }}
             />
           </Box>
         </Grid>

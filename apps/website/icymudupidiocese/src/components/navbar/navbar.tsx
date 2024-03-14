@@ -14,6 +14,7 @@ export default function Navbar() {
   let navItems: {
     name: string;
     path: string;
+    scrollTo?: string;
     dropdownItems?: {
       name: string;
       path: string;
@@ -45,13 +46,42 @@ export default function Navbar() {
             { name: "Parishes", path: "/parishes" },
           ],
         },
-        { name: "Kallianpur Deanery", path: "/profile/edit" },
-        { name: "Udupi Deanery", path: "/profile/edit" },
-        { name: "Karkol Deanery", path: "/profile/edit" },
+        {
+          name: "Kallianpur Deanery",
+          path: "/profile/edit",
+          innerLevelDropdown: [
+            { name: "Deanery Director & Commitee", path: "/parishes" },
+            { name: "Parishes", path: "/parishes" },
+          ],
+        },
+        {
+          name: "Udupi Deanery",
+          path: "/profile/edit",
+          innerLevelDropdown: [
+            { name: "Deanery Director & Commitee", path: "/parishes" },
+            { name: "Parishes", path: "/parishes" },
+          ],
+        },
+        {
+          name: "Karkol Deanery",
+          path: "/profile/edit",
+          innerLevelDropdown: [
+            { name: "Deanery Director & Commitee", path: "/parishes" },
+            { name: "Parishes", path: "/parishes" },
+          ],
+        },
+        {
+          name: "Shirva Deanery",
+          path: "",
+          innerLevelDropdown: [
+            { name: "Deanery Director & Commitee", path: "/parishes" },
+            { name: "Parishes", path: "/parishes" },
+          ],
+        },
       ],
     },
     { name: "News", path: "/profile" },
-    { name: "Dexco", path: "/profile" },
+    { name: "Dexco", path: "", scrollTo: "dexcoInfo" },
   ];
 
   const handlePopoverOpen = (
@@ -122,6 +152,17 @@ export default function Navbar() {
                   let x = document.getElementById(item?.name + "underline");
                   if (x) {
                     x.style.display = "none";
+                  }
+                }}
+                onClick={() => {
+                  if (item?.scrollTo) {
+                    console.log(item);
+
+                    const element = document.getElementById("dexcoInfo");
+                    element?.scrollIntoView({
+                      behavior: "smooth",
+                      block: "start",
+                    });
                   }
                 }}
               >
