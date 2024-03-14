@@ -1,6 +1,7 @@
 import { Box, Grid, Typography } from "@mui/material";
 import React from "react";
 import CountUp from "react-countup";
+import { SECONDARY_THEME_COLOR } from "../../../providers/theme/colors/colors";
 
 export default function YouthCountSection() {
   return (
@@ -12,7 +13,15 @@ export default function YouthCountSection() {
       </Box>
       <Grid container spacing={3} mt={1} mb={3}>
         <Grid item md={4} lg={4} sm={12}>
-          <Box display={"flex"} flexDirection={"column"} alignItems={"center"}>
+          <Box
+            display={"flex"}
+            flexDirection={"column"}
+            alignItems={"center"}
+            border={`1px solid ${SECONDARY_THEME_COLOR}`}
+            borderRadius={2}
+            minHeight={200}
+            justifyContent={"center"}
+          >
             <Box>
               <Typography variant="h5">Total Youth Count</Typography>
             </Box>
@@ -23,7 +32,15 @@ export default function YouthCountSection() {
           </Box>
         </Grid>
         <Grid item md={4} lg={4} sm={12}>
-          <Box display={"flex"} flexDirection={"column"} alignItems={"center"}>
+          <Box
+            display={"flex"}
+            flexDirection={"column"}
+            alignItems={"center"}
+            border={`1px solid ${SECONDARY_THEME_COLOR}`}
+            borderRadius={2}
+            minHeight={200}
+            justifyContent={"center"}
+          >
             <Box>
               <Typography variant="h5">Active Youth Count</Typography>
             </Box>
@@ -33,7 +50,15 @@ export default function YouthCountSection() {
           </Box>
         </Grid>
         <Grid item md={4} lg={4} sm={12}>
-          <Box display={"flex"} flexDirection={"column"} alignItems={"center"}>
+          <Box
+            display={"flex"}
+            flexDirection={"column"}
+            alignItems={"center"}
+            justifyContent={"center"}
+            border={`1px solid ${SECONDARY_THEME_COLOR}`}
+            borderRadius={2}
+            minHeight={200}
+          >
             <Box>
               <Typography variant="h5">InActive Youth Count</Typography>
             </Box>

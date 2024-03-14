@@ -6,6 +6,7 @@ import {
 } from "../../providers/theme/colors/colors";
 import { Link, useLocation } from "react-router-dom";
 import "./style.css";
+import { KeyboardArrowDownOutlined } from "@mui/icons-material";
 
 export default function Navbar() {
   const { pathname } = useLocation();
@@ -107,7 +108,9 @@ export default function Navbar() {
             >
               <Link
                 to={item?.path}
-                style={{ textDecoration: "none" }}
+                style={{
+                  textDecoration: "none",
+                }}
                 onMouseEnter={(e) => {
                   handlePopoverOpen(e, item?.name);
                   let x = document.getElementById(item?.name + "underline");
@@ -123,6 +126,7 @@ export default function Navbar() {
                 }}
               >
                 <Typography
+                  display={"flex"}
                   color={
                     pathname?.includes(item?.name.toLowerCase()) ||
                     item?.name === "Home"
@@ -138,6 +142,13 @@ export default function Navbar() {
                   textAlign="center"
                 >
                   {item?.name}
+
+                  {item?.dropdownItems && (
+                    <KeyboardArrowDownOutlined
+                      fontSize="small"
+                      sx={{ mt: 0.5 }}
+                    />
+                  )}
                 </Typography>
                 <Box
                   display={"none"}
