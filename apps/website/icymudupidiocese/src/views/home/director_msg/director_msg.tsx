@@ -51,9 +51,9 @@ export default function DirectorMsg() {
             </Box>
             <Box mt={3} ml={2}>
               <Typography fontWeight={"600"}>
-                Director Steevan Fernandes
+                Rev. Fr Steevan Fernandes
               </Typography>
-              <Typography>Bishop of udupi and Chairman</Typography>
+              <Typography>ICYM/YCS Director of udupi Diocese</Typography>
             </Box>
           </Box>
         </Grid>

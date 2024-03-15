@@ -1,6 +1,8 @@
 import { Avatar, Box, Grid, Typography } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
+import { SECONDARY_THEME_COLOR } from "../../../../providers/theme/colors/colors";
+import { ArrowRightAlt } from "@mui/icons-material";
 
 interface Props {}
 
@@ -40,9 +42,24 @@ function TopNews() {
 
   return (
     <Box>
-      <Typography variant="h4" fontWeight={"600"}>
-        Top news
-      </Typography>
+      <Box mb={2} display={"flex"} justifyContent={"space-between"}>
+        <Typography variant="h4" fontWeight={"600"}>
+          Top news
+        </Typography>
+        <Box
+          display={"flex"}
+          mt={1}
+          borderBottom={`3px solid ${SECONDARY_THEME_COLOR}`}
+          width={"fit-content"}
+          onClick={() => {}}
+          sx={{ cursor: "pointer" }}
+        >
+          <Typography variant="body2" fontWeight={"600"}>
+            View all
+          </Typography>
+          <ArrowRightAlt />
+        </Box>
+      </Box>
 
       <Box
         display={"flex"}
@@ -50,6 +67,7 @@ function TopNews() {
         mt={2}
         borderRadius={2}
         sx={{ backgroundColor: "#09084F" }}
+        minHeight={250}
       >
         <Grid container spacing={3} py={4}>
           {news?.map((item, index) => {
@@ -78,16 +96,6 @@ function TopNews() {
             );
           })}
         </Grid>
-        <Box display={"flex"}>
-          <Box
-            top={0}
-            position={"absolute"}
-            zIndex={99999}
-            sx={{ backgroundColor: "#FF951F" }}
-          >
-            sdf
-          </Box>
-        </Box>
       </Box>
     </Box>
   );
