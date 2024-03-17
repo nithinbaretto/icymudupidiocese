@@ -115,7 +115,7 @@ export default function Navbar() {
           </Box>
           <Box>
             <Typography variant="h6" fontWeight={"600"}>
-              ICYM Udupi Diocese
+              Youth Commission Udupi
             </Typography>
           </Box>
         </Box>

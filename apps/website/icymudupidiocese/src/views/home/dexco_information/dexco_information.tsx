@@ -1,10 +1,11 @@
-import { Avatar, Box, Card, Grid, Typography } from "@mui/material";
+import { Avatar, Box, Card, Grid, Tab, Tabs, Typography } from "@mui/material";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import React from "react";
+import React, { useState } from "react";
 import { SECONDARY_THEME_COLOR } from "../../../providers/theme/colors/colors";
 
 export default function DexcoInformation(this: any) {
+  const [selectedTab, setSelectedTab] = useState(0);
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -40,9 +41,20 @@ export default function DexcoInformation(this: any) {
     <Box mb={4} id="dexcoInfo">
       <Box mb={3}>
         <Typography variant="h4" fontWeight={"600"}>
-          ICYM DEXCO
+          Youth Commission
         </Typography>
         <Typography variant="h5">Udupi Diocese</Typography>
+      </Box>
+      <Box mb={2}>
+        <Tabs
+          value={selectedTab}
+          onChange={() => {}}
+          aria-label="basic tabs example"
+        >
+          <Tab label="Icym Dexco" />
+          <Tab label="Ycs Dexco" />
+          <Tab label="Ysm Dexco" />
+        </Tabs>
       </Box>
       <Carousel
         swipeable={false}

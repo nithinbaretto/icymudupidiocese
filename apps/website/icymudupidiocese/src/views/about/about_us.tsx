@@ -7,7 +7,7 @@ export default function AboutUs() {
     <MainLayout>
       <Box mt={2} mb={4}>
         <Typography variant="h4" fontWeight={"600"} textAlign={"center"}>
-          Icym Udupi diocese
+          Youth Commission Udupi
         </Typography>
         <Typography variant="h6" mt={4}>
           Lorem Ipsum is simply dummy text of the printing and typesetting

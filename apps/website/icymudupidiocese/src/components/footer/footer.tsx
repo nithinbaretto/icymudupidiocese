@@ -23,7 +23,7 @@ export default function Footer() {
             </Box>
             <Box>
               <Typography variant="h6" fontWeight={"600"} color="#ffffff">
-                ICYM Udupi Diocese
+                Youth Commission Udupi
               </Typography>
             </Box>
           </Box>
@@ -208,7 +208,7 @@ export default function Footer() {
         <Grid item md={5} lg={5} sm={12}>
           <Box mt={4}>
             <Typography variant="subtitle1" color="#ffffff">
-              © 2023 ICYM UDUPI DIOCESE All Rights Reserved
+              © 2023 Youth Commission Udupi All Rights Reserved
             </Typography>
           </Box>
         </Grid>
