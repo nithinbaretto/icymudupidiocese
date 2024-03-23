@@ -4,6 +4,7 @@ import Profile from "../views/profile/profile";
 import AboutUs from "../views/about/about_us";
 import News from "../views/news/news";
 import ParishListing from "../views/parish_listing/parish_listing";
+import CommitteeListing from "../views/committee_listing/committee_listing";
 
 export const routes = [
   {
@@ -29,6 +30,11 @@ export const routes = [
   {
     path: "/parishes",
     element: <ParishListing />,
+    title: "Parishes",
+  },
+  {
+    path: "/parishes/parish",
+    element: <CommitteeListing />,
     title: "Parish",
   },
 ];
