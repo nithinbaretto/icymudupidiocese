@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "react-countup": "^6.5.0"
+    "react-countup": "^6.5.0",
+    "react-device-detect": "^2.2.3"
   }
 }

@@ -1,6 +1,7 @@
 import { Avatar, Box, Card, Grid, Typography } from "@mui/material";
 import React from "react";
 import MainLayout from "../../layouts/main_layout/main_layout";
+import ComingSoon from "../components/coming_soon/coming_soon";
 
 export default function News() {
   let newsDetails = {
@@ -71,7 +72,8 @@ export default function News() {
   ];
   return (
     <MainLayout>
-      <Grid container justifyContent={"center"} spacing={3}>
+      <ComingSoon />
+      {/* <Grid container justifyContent={"center"} spacing={3}>
         <Grid
           display={"flex"}
           justifyContent={"flex-end"}
@@ -156,7 +158,7 @@ export default function News() {
             })}
           </Box>
         </Grid>
-      </Grid>
+      </Grid> */}
     </MainLayout>
   );
 }

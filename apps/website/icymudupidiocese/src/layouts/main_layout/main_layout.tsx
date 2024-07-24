@@ -9,7 +9,7 @@ import Breadcrumb from "../../components/breadcrumbs/breadcrubm";
 export default function MainLayout({ children }: PropsWithChildren<{}>) {
   return (
     <BaseLayout>
-      <Grid container>
+      <Grid container justifyContent={"center"}>
         <Box
           sx={{
             display: "flex",
@@ -29,12 +29,12 @@ export default function MainLayout({ children }: PropsWithChildren<{}>) {
           <Grid md={1} lg={1} />
         </Box>
         <Grid md={1} lg={1} />
-        <Grid item md={10} lg={10} sm={12} mt={12}>
+        <Grid item md={10} lg={10} sm={10} xs={10} mt={12}>
           <Breadcrumb />
           {children}
         </Grid>
         <Grid md={1} lg={1} />
-        <Grid item md={12} lg={12} sm={12}>
+        <Grid item md={12} lg={12} sm={12} xs={12}>
           <Footer />
         </Grid>
       </Grid>

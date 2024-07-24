@@ -12,7 +12,7 @@ export default function YouthCountSection() {
         </Typography>
       </Box>
       <Grid container spacing={6} mt={1} mb={3}>
-        <Grid item md={4} lg={4} sm={12}>
+        <Grid item md={4} lg={4} sm={12} xs={12}>
           <Box
             display={"flex"}
             flexDirection={"column"}
@@ -33,7 +33,7 @@ export default function YouthCountSection() {
             </Box>
           </Box>
         </Grid>
-        <Grid item md={4} lg={4} sm={12}>
+        <Grid item md={4} lg={4} sm={12} xs={12}>
           <Box
             display={"flex"}
             flexDirection={"column"}
@@ -53,7 +53,7 @@ export default function YouthCountSection() {
             </Box>
           </Box>
         </Grid>
-        <Grid item md={4} lg={4} sm={12}>
+        <Grid item md={4} lg={4} sm={12} xs={12}>
           <Box
             display={"flex"}
             flexDirection={"column"}

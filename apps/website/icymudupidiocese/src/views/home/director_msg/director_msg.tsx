@@ -57,7 +57,7 @@ export default function DirectorMsg() {
             </Box>
           </Box>
         </Grid>
-        <Grid display={"flex"} item md={6} lg={6} sm={12}>
+        <Grid display={"flex"} item md={6} lg={6} sm={12} xs={12}>
           <Box
             display={"flex"}
             height="100%"
@@ -67,7 +67,7 @@ export default function DirectorMsg() {
             <img
               src={"https://kryc.org/img/Steevan_Fernandes.jpeg"}
               alt=""
-              height={500}
+              height={400}
               style={{ borderRadius: 15 }}
             />
           </Box>
