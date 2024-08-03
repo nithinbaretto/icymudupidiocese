@@ -1,10 +1,11 @@
 import { ArrowRightAlt } from "@mui/icons-material";
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Grid, IconButton, Typography } from "@mui/material";
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { SECONDARY_THEME_COLOR } from "../../../../providers/theme/colors/colors";
 
 export default function AboutUs() {
+  const navigate = useNavigate();
   return (
     <Box mt={4}>
       <Typography variant="h4" fontWeight={"600"}>
@@ -13,20 +14,15 @@ export default function AboutUs() {
       <Typography variant="h5">Icym Udupi Diocese</Typography>
       <Box mt={2}>
         <Typography variant="subtitle1">
-          Karnataka Regional Youth Commission (KRYC) is under the leadership of
-          Karnataka Regional Catholic Bishop's Council (KRCBC). Most Rev. Dr.
-          Peter Machado, Archbishop of Bangalore is the President of KRCBC and
-          also the president of KRYC. It is one of the 22 Regional Commissions
-          of the KRCBC. Most Rev. Dr. Henry D’Souza, Bishop of Bellary Diocese
-          is the Chairman of the Karnataka Regional Youth Commission and Most
-          Rev. Mar Joseph Arumachadath Bishop of Bhadravathi is the
-          joint-chairman. At present Fr. Lourd Raj is the Secretary for KRCBC
-          Youth Commission. He takes care ICYM, YCS/YSM, and MIJARC as Regional
-          director and Chaplin as well. Sr. Magdalene Pakianathan VC serves as
-          the Regional Youth Lady Animator. The Karnataka Regional Youth
-          Commission office is placed in Karnataka Regional Pastoral Centre,
-          Bangalore. The church in India as a whole is divided into 13 regions
-          and the Karnataka state is one such region.
+          The Youth Commission is under the leadership of Most Rev. Dr. Gerald
+          Isaac Lobo, Bishop of Udupi, and Rev. Fr. Steven Fernandes, Youth
+          Director of the Diocese of Udupi. Currently, Fr. Steven Fernandes
+          serves as the Secretary for the Youth Commission and oversees ICYM,
+          YCS, and YSM. Mr. Melwyn Castelino and Mrs. Kavita D'Silva are the
+          Animators for YCS, and Mrs. Sandra Lobo is the Animator for YSM. The
+          Youth Commission office is located at ANUGRAHA Pastoral Centre,
+          Kakkunje, Santhekatte. The Udupi Diocese as a whole is divided into 5
+          Deaneries
         </Typography>
         <Box
           display={"flex"}
@@ -39,7 +35,12 @@ export default function AboutUs() {
           <Typography variant="body2" fontWeight={"600"}>
             Read more
           </Typography>
-          <ArrowRightAlt />
+          <IconButton
+            style={{ margin: 0, padding: 0 }}
+            onClick={() => navigate("/about")}
+          >
+            <ArrowRightAlt />
+          </IconButton>
         </Box>
       </Box>
       <Box mt={4} />

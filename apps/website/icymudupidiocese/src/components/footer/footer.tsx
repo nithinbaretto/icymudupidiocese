@@ -5,10 +5,12 @@ import {
   LocationOnOutlined,
   Phone,
   WhatsApp,
+  YouTube,
 } from "@mui/icons-material";
 import { Avatar, Box, Grid, Typography } from "@mui/material";
 import React from "react";
 import { isMobile } from "react-device-detect";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -122,8 +124,16 @@ export default function Footer() {
                     borderRadius={20}
                     sx={{
                       backgroundColor: "#F5E6F5",
+                      cursor: "pointer",
                     }}
                     justifyContent={"center"}
+                    onClick={() => {
+                      window.open(
+                        "https://www.facebook.com/icym.udupidiocese",
+                        "_blank",
+                        "noopener,noreferrer"
+                      );
+                    }}
                   >
                     <FacebookOutlined />
                   </Box>
@@ -135,11 +145,19 @@ export default function Footer() {
                     borderRadius={20}
                     sx={{
                       backgroundColor: "#F5E6F5",
+                      cursor: "pointer",
                     }}
                     justifyContent={"center"}
                     ml={2}
+                    onClick={() => {
+                      window.open(
+                        "https://www.youtube.com/@YouthCommissionUdupiDiocese",
+                        "_blank",
+                        "noopener,noreferrer"
+                      );
+                    }}
                   >
-                    <WhatsApp />
+                    <YouTube />
                   </Box>
                   <Box
                     display={"flex"}
@@ -149,9 +167,17 @@ export default function Footer() {
                     borderRadius={20}
                     sx={{
                       backgroundColor: "#F5E6F5",
+                      cursor: "pointer",
                     }}
                     justifyContent={"center"}
                     ml={2}
+                    onClick={() => {
+                      window.open(
+                        "https://www.instagram.com/icym_udupi_diocese/",
+                        "_blank",
+                        "noopener,noreferrer"
+                      );
+                    }}
                   >
                     <Instagram />
                   </Box>
@@ -164,44 +190,56 @@ export default function Footer() {
                   Quick links
                 </Typography>
                 <Box display={"flex"} flexDirection={"column"} mt={2}>
-                  <Typography
-                    variant="h6"
-                    borderBottom={2}
-                    color="#ffffff"
-                    width="fit-content"
+                  <Link
+                    to="/"
+                    style={{ textDecoration: "none", width: "fit-content" }}
                   >
-                    Home
-                  </Typography>
+                    <Typography variant="h6" borderBottom={2} color="#ffffff">
+                      Home
+                    </Typography>
+                  </Link>
 
-                  <Typography
-                    variant="h6"
-                    borderBottom={2}
-                    color="#ffffff"
-                    width="fit-content"
-                    mt={1}
+                  <Link
+                    to="/about"
+                    style={{ textDecoration: "none", width: "fit-content" }}
                   >
-                    About
-                  </Typography>
+                    <Typography
+                      variant="h6"
+                      borderBottom={2}
+                      color="#ffffff"
+                      marginTop={1}
+                    >
+                      About
+                    </Typography>
+                  </Link>
 
-                  {/* <Typography
-                    variant="h6"
-                    borderBottom={2}
-                    color="#ffffff "
-                    width="fit-content"
-                    mt={1}
+                  <Link
+                    to="/news"
+                    style={{ textDecoration: "none", width: "fit-content" }}
                   >
-                    Programmes
-                  </Typography>
+                    <Typography
+                      variant="h6"
+                      borderBottom={2}
+                      color="#ffffff"
+                      marginTop={1}
+                    >
+                      News
+                    </Typography>
+                  </Link>
 
-                  <Typography
-                    variant="h6"
-                    borderBottom={2}
-                    color="#ffffff"
-                    width="fit-content"
-                    mt={1}
+                  <Link
+                    to="/contactus"
+                    style={{ textDecoration: "none", width: "fit-content" }}
                   >
-                    Trending
-                  </Typography> */}
+                    <Typography
+                      variant="h6"
+                      borderBottom={2}
+                      color="#ffffff"
+                      marginTop={1}
+                    >
+                      Contact us
+                    </Typography>
+                  </Link>
                 </Box>
               </Box>
             </Grid>
@@ -221,16 +259,20 @@ export default function Footer() {
             borderBottom={"1px solid #ffffff"}
             width={"100%"}
           />
-          <Grid container mb={3}>
-            <Grid item md={1} lg={1} sm={12} />
+          <Grid container mb={3} justifyContent={"center"}>
+            {/* <Grid item md={1} lg={1} sm={12} /> */}
             <Grid item md={5} lg={5} sm={12}>
-              <Box mt={4}>
-                <Typography variant="subtitle1" color="#ffffff">
+              <Box display={"flex"} mt={4} justifyContent={"center"}>
+                <Typography
+                  variant="subtitle1"
+                  color="#ffffff"
+                  textAlign={"center"}
+                >
                   © 2023 Youth Commission Udupi All Rights Reserved
                 </Typography>
               </Box>
             </Grid>
-            <Grid
+            {/* <Grid
               display={"flex"}
               item
               md={5}
@@ -247,7 +289,7 @@ export default function Footer() {
                   Terms and condition
                 </Typography>
               </Box>
-            </Grid>
+            </Grid> */}
           </Grid>
         </Grid>
       </Grid>

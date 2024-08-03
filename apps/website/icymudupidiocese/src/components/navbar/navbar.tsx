@@ -134,7 +134,7 @@ export default function Navbar() {
     // },
     { name: "News", path: "/news" },
     { name: "Dexco", path: "", scrollTo: "dexcoInfo" },
-    { name: "Contact us", path: "", scrollTo: "contactus" },
+    { name: "Contact us", path: "/contactus" },
   ];
 
   const handlePopoverOpen = (

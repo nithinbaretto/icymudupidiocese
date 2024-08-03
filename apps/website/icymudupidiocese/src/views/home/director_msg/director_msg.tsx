@@ -21,23 +21,25 @@ export default function DirectorMsg() {
             </Box>
             <Box mt={3}>
               <Typography>
-                My dear young friends, I greet you most warmly and thank you for
-                being friends of Christ and his Church! You are the present and
-                the future of the Church. The Church has great hopes in you,
-                because you bring energy, vitality and dreams for tomorrow. Many
-                of you with a thirst for the Word of God and desire for greater
-                holiness of life are drawn to Charismatic Conventions, Retreats,
-                Seminars and other events. Quite of few with zeal for the
-                proclamation of the Word of God are effectively using the modern
-                means of communication such as Internet. You aware that “Rooted
-                and Built Up in Christ, and Firm in the Faith” (cf. Col 2:7),
-                transformed by faith, you are called to transform the world.
-                Sadly, how can young people encounter those reference points in
-                a society which is increasingly confused and unstable? Youth of
-                today are looking for something more noble, more lofty and
+                “Welcome to the Udupi Diocese Youth Page” As the Youth Director
+                of the Udupi Diocese, I am thrilled to connect with all our
+                vibrant and dynamic youth. Here, you'll find updates and
+                information about our active movements: ICYM (Indian Catholic
+                Youth Movement), YCS (Young Catholic Students), and YSM (Young
+                Students Movement).These movements are dedicated to empowering
+                young people, fostering faith, and promoting social justice and
+                community service. Our goal is to provide a platform for growth,
+                learning, and active participation in the Church and society.
+                Explore our site to learn more about upcoming events,
+                activities, and opportunities to get involved. Let's work
+                together to make a positive impact and build a strong,
+                supportive youth community. Feel free to reach out if you have
+                any questions or suggestions. We look forward to your
+                participation and contribution.
               </Typography>
+              <Typography mt={2}>Blessings,</Typography>
             </Box>
-            <Box
+            {/* <Box
               display={"flex"}
               mt={1}
               borderBottom={`3px solid ${SECONDARY_THEME_COLOR}`}
@@ -48,12 +50,11 @@ export default function DirectorMsg() {
                 Read more
               </Typography>
               <ArrowRightAlt />
-            </Box>
+            </Box> */}
             <Box mt={3} ml={2}>
-              <Typography fontWeight={"600"}>
-                Rev. Fr Steevan Fernandes
-              </Typography>
-              <Typography>ICYM/YCS Director of udupi Diocese</Typography>
+              <Typography fontWeight={"600"}>Fr Steven Fernandes</Typography>
+              <Typography>Youth Director, Diocese of Udupi</Typography>
+              <Typography></Typography>
             </Box>
           </Box>
         </Grid>

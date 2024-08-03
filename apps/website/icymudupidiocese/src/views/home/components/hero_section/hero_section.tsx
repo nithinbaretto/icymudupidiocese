@@ -4,24 +4,25 @@ import theme from "../../../../providers/theme";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "../../style.css";
+import { isMobile } from "react-device-detect";
 
 export default function HeroSection() {
   let items = [
     {
       name: "Carousel 1",
-      img: "https://image.roku.com/w/rapid/images/meta-image/888fce38-b734-4262-acdf-c7028be9f591.jpg",
+      img: "/images/banner_one.jpg",
     },
     {
       name: "Carousel 1",
-      img: "https://image.roku.com/w/rapid/images/meta-image/888fce38-b734-4262-acdf-c7028be9f591.jpg",
+      img: "/images/banner_one.jpg",
     },
     {
       name: "Carousel 1",
-      img: "https://image.roku.com/w/rapid/images/meta-image/888fce38-b734-4262-acdf-c7028be9f591.jpg",
+      img: "/images/banner_one.jpg",
     },
     {
       name: "Carousel 1",
-      img: "https://image.roku.com/w/rapid/images/meta-image/888fce38-b734-4262-acdf-c7028be9f591.jpg",
+      img: "/images/banner_one.jpg",
     },
   ];
   return (
@@ -81,7 +82,7 @@ export default function HeroSection() {
               >
                 <img
                   style={{
-                    height: "80vh",
+                    height: isMobile ? "25vh" : "80vh",
                     width: "100%",
                     borderRadius: 20,
                     objectFit: "cover",

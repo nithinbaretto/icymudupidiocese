@@ -12,14 +12,14 @@ import TopNews from "./components/top_news/top_news";
 export default function Home() {
   return (
     <MainLayout>
-      {/* <HeroSection /> */}
+      <HeroSection />
       <AboutUs />
       {/* <TrendingNews />
       <TopNews /> */}
-      <ChairmansMsg />
+      {/* <ChairmansMsg /> */}
       <DirectorMsg />
       <DexcoInformation />
-      <YouthCountSection />
+      {/* <YouthCountSection /> */}
     </MainLayout>
   );
 }

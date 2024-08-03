@@ -5,6 +5,7 @@ import AboutUs from "../views/about/about_us";
 import News from "../views/news/news";
 import ParishListing from "../views/parish_listing/parish_listing";
 import CommitteeListing from "../views/committee_listing/committee_listing";
+import ContactUs from "../views/contact_us/contact_us";
 
 export const routes = [
   {
@@ -36,6 +37,11 @@ export const routes = [
     path: "/parishes/parish",
     element: <CommitteeListing />,
     title: "Parish",
+  },
+  {
+    path: "/contactus",
+    element: <ContactUs />,
+    title: "Contact Us",
   },
 ];
 
