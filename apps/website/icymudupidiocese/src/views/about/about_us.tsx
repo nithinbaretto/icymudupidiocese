@@ -10,21 +10,21 @@ export default function AboutUs() {
       id: 1,
       name: "Rev. Fr Larry Pinto",
       post: "ICYM-YCS Director",
-      img: "/images/placeholder.jpg",
-      deanery: " Karkal Deanery",
+      img: "/images/directors/karkal_icym_director.jpeg",
+      deanery: "Karkal Deanery",
     },
     {
       id: 2,
       name: "Rev. Fr Roy Lobo",
       post: "ICYM-YCS Director",
-      img: "/images/placeholder.jpg",
-      deanery: " Karkal Deanery",
+      img: "/images/directors/kundapur_icym_director.jpg",
+      deanery: "Kundapur Deanery",
     },
     {
       id: 3,
       name: "Rev. Fr Anil DSilva",
       post: "ICYM Director",
-      img: "/images/placeholder.jpg",
+      img: "/images/directors/kallianpur_icym_director.jpeg",
       deanery: "Kallianpur Deanery",
     },
     {
@@ -32,21 +32,14 @@ export default function AboutUs() {
       name: "Rev. Fr Oliver Nazreth",
       post: "YCS Director",
       img: "/images/placeholder.jpg",
-      deanery: " Kallianpur Deanery",
-    },
-    {
-      id: 5,
-      name: " Rev. Fr Arnold Dsouza",
-      post: "ICYM Director",
-      img: "/images/placeholder.jpg",
-      deanery: " Shirva Deanery",
+      deanery: "Kallianpur Deanery",
     },
     {
       id: 6,
       name: " Rev. Fr Arnold Dsouza",
       post: "ICYM Director",
-      img: "/images/directors/shirva_icym_director.jpeg",
-      deanery: " Shirva Deanery",
+      img: "/images/directors/shirva_icym_director.jpg",
+      deanery: "Shirva Deanery",
     },
     {
       id: 7,
@@ -59,7 +52,7 @@ export default function AboutUs() {
       id: 8,
       name: "Rev. Fr Ronson Dsouza",
       post: "ICYM Director",
-      img: "/images/placeholder.jpg",
+      img: "/images/directors/udupi_icym_director.jpg",
       deanery: "Udupi Deanery",
     },
     {
@@ -124,6 +117,7 @@ export default function AboutUs() {
                       width: "100%",
                       borderRadius: 10,
                       aspectRatio: 1,
+                      objectFit: "cover",
                     }}
                   />
                   <Typography mt={1} variant="subtitle2">
@@ -190,7 +184,7 @@ export default function AboutUs() {
               mx={1}
             >
               <Typography variant="button" mx={1}>
-                46 ICYM units
+                48 YCS units
               </Typography>
             </Box>
           </Box>

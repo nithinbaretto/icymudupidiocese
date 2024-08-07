@@ -81,7 +81,7 @@ export default function Footer() {
                       Engage With Us :
                     </Typography>
                     <Typography variant="h6" color="#ffffff">
-                      7406411821
+                      9945733168
                     </Typography>
                   </Box>
                 </Box>
@@ -104,7 +104,9 @@ export default function Footer() {
                       Find Us :
                     </Typography>
                     <Typography variant="h6" color="#ffffff">
-                      {"Bishop's House Udupi Karnataka, 576101, India"}
+                      {
+                        "Anugraha pastoral center, Kakkunje, Santhekatte Post, Udupi - 576105"
+                      }
                     </Typography>
                   </Box>
                 </Box>
@@ -193,6 +195,7 @@ export default function Footer() {
                   <Link
                     to="/"
                     style={{ textDecoration: "none", width: "fit-content" }}
+                    onClick={() => window.scrollTo(0, 0)}
                   >
                     <Typography variant="h6" borderBottom={2} color="#ffffff">
                       Home
@@ -202,6 +205,7 @@ export default function Footer() {
                   <Link
                     to="/about"
                     style={{ textDecoration: "none", width: "fit-content" }}
+                    onClick={() => window.scrollTo(0, 0)}
                   >
                     <Typography
                       variant="h6"
@@ -216,6 +220,7 @@ export default function Footer() {
                   <Link
                     to="/news"
                     style={{ textDecoration: "none", width: "fit-content" }}
+                    onClick={() => window.scrollTo(0, 0)}
                   >
                     <Typography
                       variant="h6"
@@ -230,6 +235,7 @@ export default function Footer() {
                   <Link
                     to="/contactus"
                     style={{ textDecoration: "none", width: "fit-content" }}
+                    onClick={() => window.scrollTo(0, 0)}
                   >
                     <Typography
                       variant="h6"

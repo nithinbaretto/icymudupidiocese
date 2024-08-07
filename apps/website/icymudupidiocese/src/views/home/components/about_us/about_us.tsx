@@ -29,7 +29,10 @@ export default function AboutUs() {
           mt={1}
           borderBottom={`3px solid ${SECONDARY_THEME_COLOR}`}
           width={"fit-content"}
-          onClick={() => {}}
+          onClick={() => {
+            navigate("/about");
+            window.scrollTo(0, 0);
+          }}
           sx={{ cursor: "pointer" }}
         >
           <Typography variant="body2" fontWeight={"600"}>
@@ -37,7 +40,10 @@ export default function AboutUs() {
           </Typography>
           <IconButton
             style={{ margin: 0, padding: 0 }}
-            onClick={() => navigate("/about")}
+            onClick={() => {
+              navigate("/about");
+              window.scrollTo(0, 0);
+            }}
           >
             <ArrowRightAlt />
           </IconButton>

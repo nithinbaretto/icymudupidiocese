@@ -8,6 +8,7 @@ import DirectorMsg from "./director_msg/director_msg";
 import DexcoInformation from "./dexco_information/dexco_information";
 import YouthCountSection from "./youth_count_section/youth_count_section";
 import TopNews from "./components/top_news/top_news";
+import Calender from "./components/calender/calender";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       {/* <ChairmansMsg /> */}
       <DirectorMsg />
       <DexcoInformation />
+      <Calender />
       {/* <YouthCountSection /> */}
     </MainLayout>
   );

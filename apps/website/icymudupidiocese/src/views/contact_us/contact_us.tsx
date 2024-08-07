@@ -20,14 +20,14 @@ function ContactUs(props: Props) {
               Fr.Steevan Fernandes,
               <br /> Anugraha Pastoral Center,
               <br /> Kukkunje, Santhekatte P.O, <br />
-              Udupi - 576201,
+              Udupi - 576105,
               <br />
               Karnataka, <br />
               India
             </Typography>
             <Box display={"flex"} mt={2}>
               <Typography fontWeight={600}>Phone no.: </Typography>
-              <Typography ml={1}> </Typography>
+              <Typography ml={1}>9945733168</Typography>
             </Box>
             <Box display={"flex"}>
               <Typography fontWeight={600}>Email:</Typography>

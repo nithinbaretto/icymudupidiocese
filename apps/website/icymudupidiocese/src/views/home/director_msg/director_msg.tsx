@@ -65,11 +65,17 @@ export default function DirectorMsg() {
             width={"100%"}
             sx={{ alignItems: "center", justifyContent: "center" }}
           >
-            <img
-              src={"https://kryc.org/img/Steevan_Fernandes.jpeg"}
+            <Box
+              component="img"
+              src="/images/fr.steevan.jpg"
               alt=""
-              height={400}
-              style={{ borderRadius: 15 }}
+              sx={{
+                borderRadius: 2,
+                width: { xs: "100%", sm: "100%", md: "100%", lg: 400 },
+                height: { xs: "auto", sm: "auto", md: "auto", lg: 400 },
+                maxHeight: { xs: "none", md: "100%" },
+                maxWidth: { xs: "none", md: "100%" },
+              }}
             />
           </Box>
         </Grid>

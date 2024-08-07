@@ -37,49 +37,50 @@ export default function DexcoInformation(this: any) {
       id: 2,
       img: "/images/riya.jpeg",
       name: "Riya Aranha",
-      post: "Scretary",
+      post: "Secretary",
     },
     {
       id: 3,
-      img: "/images/ashley.jpeg",
-      name: "Ashley D'souza",
-      post: "Secretary, REXCO",
-    },
-    {
-      id: 4,
-      img: "/images/glanish.jpeg",
-      name: "Glanis Joyal Monteiro",
-      post: "Reprentative, REXCO",
-    },
-    {
-      id: 5,
-      img: "/images/playson.jpg",
-      name: "Playson Dsouza",
-      post: "PRO",
-    },
-    {
-      id: 6,
-      img: "/images/mervin.jpg",
+      img: "/images/mervin.jpeg",
       name: "Mervin Lawrence D Almeida",
       post: "Vice President",
     },
     {
-      id: 7,
-      img: "/images/siona.jpeg",
-      name: "Siona",
+      id: 4,
+      img: "/images/siona.jpg",
+      name: "Jane Siona Dsouza",
       post: "Joint Secretary / Youcat Incharge",
     },
     {
-      id: 8,
+      id: 5,
+      img: "/images/playson.jpeg",
+      name: "Playson Dsouza",
+      post: "P.R.O",
+    },
+    {
+      id: 6,
+      img: "/images/rouvin.jpg",
+      name: "Rouvin Francis Pereira",
+      post: "Treasurer",
+    },
+    {
+      id: 7,
       img: "/images/mecnel.jpeg",
       name: "Mecnel Rodrigues",
       post: "Sports / Cultural / Liturgy Incharge",
     },
+
+    {
+      id: 8,
+      img: "/images/ashley.jpg",
+      name: "Ashley D'souza",
+      post: "Regional Secretary",
+    },
     {
       id: 9,
-      img: "/images/rouvin.jpg",
-      name: "Rouvin Francis Pereira",
-      post: "Treasurer",
+      img: "/images/glanish.jpeg",
+      name: "Glanis Joyal Monteiro",
+      post: "Regional Representative",
     },
     {
       id: 10,
@@ -101,31 +102,19 @@ export default function DexcoInformation(this: any) {
     },
     {
       id: 13,
-      img: "/images/shiney.jpg",
+      img: "/images/shiney_udupi_deanery_president.jpg",
       name: "Shiney Alva",
       post: "President, Udupi Deanery",
     },
     {
       id: 14,
-      img: "/images/nithin.jpeg",
+      img: "/images/nithin.jpg",
       name: "Nithin Baretto",
       post: "President, Kundapur Deanery",
     },
   ];
 
   let ycs_dexco = [
-    {
-      id: 1,
-      img: "/images/dexco_president.jpg",
-      name: "Joshva Heradl Fernandes",
-      post: "President",
-    },
-    {
-      id: 2,
-      img: "/images/secretary_.jpg",
-      name: "Preeshal Onisia Dmello",
-      post: "Scretary",
-    },
     {
       id: 3,
       img: "/images/animator_1.jpeg",
@@ -135,9 +124,65 @@ export default function DexcoInformation(this: any) {
     {
       id: 4,
       img: "/images/animator_2.jpg",
-      name: "Jevviv Kavitha Cutinho",
+      name: "Jenviv Kavitha Cutinho",
       post: "Animator",
     },
+    {
+      id: 1,
+      img: "/images/dexco_president.jpg",
+      name: "Joshwa Herald Fernandes",
+      post: "President",
+    },
+
+    {
+      id: 13,
+      img: "/images/harshith_fernandes.jpeg",
+      name: "Harshith Fernandes",
+      post: "Male Vice President",
+    },
+    {
+      id: 14,
+      img: "/images/melisha_noronha.jpeg",
+      name: "Melisha Noronha",
+      post: "Female Vice President",
+    },
+    {
+      id: 2,
+      img: "/images/secretary_.jpg",
+      name: "Preeshal Onisia Dmello",
+      post: "Secretary",
+    },
+    {
+      id: 14,
+      img: "/images/cadence_latonia_dsouza.jpeg",
+      name: "Cadence Latonia D’Souza",
+      post: "Joint Secretary",
+    },
+    {
+      id: 11,
+      img: "/images/treasurer.jpg",
+      name: "Meghan Diya Mendonca",
+      post: "Treasurer",
+    },
+    {
+      id: 10,
+      img: "/images/P.R.O.jpg",
+      name: "Calvin Crasta",
+      post: "P.R.O",
+    },
+    {
+      id: 13,
+      img: "/images/youcat_incharge.jpg",
+      name: "Livia Syna Mendonca",
+      post: "Youcat Incharge",
+    },
+    {
+      id: 6,
+      img: "/images/yuvagaaz_co_editor.jpeg",
+      name: "Reshal Dsouza",
+      post: "Yuvagaaz Co Editor",
+    },
+
     {
       id: 5,
       img: "/images/caltural_liturgy_incharge.jpg",
@@ -149,6 +194,19 @@ export default function DexcoInformation(this: any) {
       img: "/images/caltural_liturgy_secretary.jpg",
       name: "Jiya Antonia Cutinho",
       post: "Cultural & Liturgy Secretary",
+      place: "YCS / YSM Karnataka",
+    },
+    {
+      id: 13,
+      img: "/images/flavian.jpg",
+      name: "Flavian Mendonca",
+      post: "RT - EXCO",
+    },
+    {
+      id: 13,
+      img: "/images/anson_nazareth.jpg",
+      name: "Anson Nazareth",
+      post: "National President",
     },
     {
       id: 7,
@@ -169,43 +227,31 @@ export default function DexcoInformation(this: any) {
       post: "Kundapur Deanery President",
     },
     {
-      id: 10,
-      img: "/images/P.R.O.jpg",
-      name: "Calvin Crasta",
-      post: "P.R.O",
-    },
-    {
-      id: 11,
-      img: "/images/treasurer.jpg",
-      name: "Meghan Diya Mendonca",
-      post: "Treasurer",
-    },
-    {
       id: 12,
       img: "/images/udupi_deanery_president.jpg",
       name: "Glaren Rayan Dsouza",
       post: " Udupi Deanery President",
     },
     {
-      id: 13,
-      img: "/images/youcat_incharge.jpg",
-      name: "Livia Syna Mendonca",
-      post: "Youcatt Incharge",
+      id: 12,
+      img: "/images/shirva_deanery_president.jpeg",
+      name: "Sweedal Mendonca",
+      post: "Shirva Deanery President",
     },
   ];
 
   let ysm_dexco = [
     {
+      id: 9,
+      img: "/images/ysm/sandra_lobo_animator.jpg",
+      name: "Mrs.Sandra Lobo",
+      post: "Animator",
+    },
+    {
       id: 1,
       img: "/images/ysm/saanvi_president.jpeg",
       name: "Ms.Saanvi",
       post: "President",
-    },
-    {
-      id: 2,
-      img: "/images/ysm/austin_nazareth_secretary.jpeg",
-      name: "Mr.Austin Nazareth",
-      post: "Scretary",
     },
     {
       id: 3,
@@ -217,13 +263,19 @@ export default function DexcoInformation(this: any) {
       id: 4,
       img: "/images/ysm/yajna_vice_president.jpeg",
       name: "Ms.Yajna",
-      post: "Vice president",
+      post: "Vice President",
     },
     {
-      id: 5,
-      img: "/images/ysm/adhvithi_pro.jpeg",
-      name: "Ms.Adhvithi",
-      post: "P.R.O",
+      id: 2,
+      img: "/images/ysm/austin_nazareth_secretary.jpg",
+      name: "Mr.Austin Nazareth",
+      post: "Secretary",
+    },
+    {
+      id: 8,
+      img: "/images/ysm/vaishnavi_goonkar_joint_secreatry.jpeg",
+      name: "Ms.Vaishnavi goonkar",
+      post: "Joint Secretary",
     },
     {
       id: 6,
@@ -232,22 +284,16 @@ export default function DexcoInformation(this: any) {
       post: "Treasurer",
     },
     {
+      id: 5,
+      img: "/images/ysm/adhvithi_pro.jpeg",
+      name: "Ms.Adhvithi",
+      post: "P.R.O",
+    },
+    {
       id: 7,
-      img: "/images/ysm/praneetha_caltural_secretary.jpeg",
+      img: "/images/ysm/praneetha_cultural_secretary.jpeg",
       name: "Ms.Praneetha",
       post: "Cultural Secretary",
-    },
-    {
-      id: 8,
-      img: "/images/ysm/vaishnavi_goonkar_joint_secretary.jpeg",
-      name: "Ms.Vaishnavi goonkar",
-      post: "Joint Secretary",
-    },
-    {
-      id: 9,
-      img: "/images/ysm/sandra_lobo_animator.jpeg",
-      name: "Mrs.Sandra Lobo",
-      post: "Animator",
     },
   ];
 
@@ -256,6 +302,7 @@ export default function DexcoInformation(this: any) {
     img: string;
     name: string;
     post: string;
+    place?: string;
   }
 
   const cardInfo = ({ item }: { item: item }) => {
@@ -295,7 +342,22 @@ export default function DexcoInformation(this: any) {
             mt={2}
           >
             <Typography fontWeight={600}>{item?.name}</Typography>
-            <Typography variant="body2">{item?.post}</Typography>
+            <Typography
+              mx={1}
+              variant="body2"
+              style={{ whiteSpace: "pre-wrap" }}
+              textAlign={"center"}
+            >
+              {item?.post}
+            </Typography>
+            <Typography
+              mx={1}
+              variant="body2"
+              style={{ whiteSpace: "pre-wrap" }}
+              textAlign={"center"}
+            >
+              {item?.place}
+            </Typography>
           </Box>
         </Box>
       </Card>

@@ -20,7 +20,7 @@ import {
   MAIN_THEME_COLOR,
   SECONDARY_THEME_COLOR,
 } from "../../providers/theme/colors/colors";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./style.css";
 import {
   ChevronLeft,
@@ -62,6 +62,7 @@ const Main = styled("main", { shouldForwardProp: (prop) => prop !== "open" })<{
 }));
 
 export default function Navbar() {
+  const navigate = useNavigate();
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
   const { pathname } = useLocation();
@@ -77,6 +78,7 @@ export default function Navbar() {
     name: string;
     path: string;
     scrollTo?: string;
+    link?: string;
     dropdownItems?: {
       name: string;
       path: string;
@@ -133,7 +135,11 @@ export default function Navbar() {
     //   ],
     // },
     { name: "News", path: "/news" },
-    { name: "Dexco", path: "", scrollTo: "dexcoInfo" },
+    {
+      name: "Reserve an Event",
+      path: "",
+      link: "https://eventbb.bookbetter.app/getCalendar/66ac820589dbe9e46d1afb74",
+    },
     { name: "Contact us", path: "/contactus" },
   ];
 
@@ -167,7 +173,7 @@ export default function Navbar() {
 
   return (
     <Grid container mt={3}>
-      <Grid item md={4} lg={4} sm={12}>
+      <Grid item md={4} lg={4} sm={11} xs={11}>
         <Box display={"flex"} alignItems={"center"}>
           <Box border="1px solid black" borderRadius={10} mx={isMobile ? 2 : 3}>
             <Avatar
@@ -187,8 +193,8 @@ export default function Navbar() {
         <Grid
           display={"flex"}
           item
-          md={7}
-          lg={7}
+          md={8}
+          lg={8}
           sm={11}
           justifyContent={"center"}
           alignItems={"center"}
@@ -227,6 +233,10 @@ export default function Navbar() {
                         behavior: "smooth",
                         block: "start",
                       });
+                    } else if (item?.link) {
+                      window.open(item?.link, "_blank", "noopener,noreferrer");
+                    } else {
+                      window.scrollTo(0, 0);
                     }
                   }}
                 >
@@ -374,6 +384,7 @@ export default function Navbar() {
                                             textDecoration: "none",
                                             color: "inherit",
                                           }}
+                                          onClick={() => window.scrollTo(0, 0)}
                                         >
                                           <Typography
                                             variant="body2"
@@ -408,13 +419,20 @@ export default function Navbar() {
       )}
 
       {isMobile && (
-        <Grid display={"flex"} item md={1} lg={1} sm={1}>
+        <Grid
+          display={"flex"}
+          justifyContent={"start"}
+          item
+          sm={1}
+          xs={1}
+          // ml={1}
+        >
           <IconButton
             color="primary"
             aria-label="open drawer"
             edge="end"
             onClick={handleDrawerOpen}
-            sx={{ ...(open && { display: "none" }) }}
+            sx={{ ...(open && { display: "none" }), p: 0, m: 0 }}
           >
             <Menu />
           </IconButton>
@@ -452,13 +470,24 @@ export default function Navbar() {
                     to={item?.path}
                     style={{
                       textDecoration: "none",
+                      width: "fit-content",
                     }}
-                    onClick={() => setOpen(false)}
+                    onClick={() => {
+                      setOpen(false);
+                      window.scrollTo(0, 0);
+                      if (item?.link) {
+                        window.open(
+                          "https://eventbb.bookbetter.app/getCalendar/66ac820589dbe9e46d1afb74",
+                          "_blank",
+                          "noopener,noreferrer"
+                        );
+                      }
+                    }}
                   >
                     <Typography color={"#1B001B"}>{item?.name}</Typography>
                   </Link>
                 </Box>
-                <ChevronRightRounded />
+                <ChevronRightRounded onClick={() => navigate(item?.path)} />
               </Box>
             ))}
           </Box>
