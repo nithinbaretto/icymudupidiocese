@@ -6,6 +6,7 @@ import News from "../views/news/news";
 import ParishListing from "../views/parish_listing/parish_listing";
 import CommitteeListing from "../views/committee_listing/committee_listing";
 import ContactUs from "../views/contact_us/contact_us";
+import Login from "../views/admin_portal/login/login";
 
 export const routes = [
   {
@@ -42,6 +43,11 @@ export const routes = [
     path: "/contactus",
     element: <ContactUs />,
     title: "Contact Us",
+  },
+  {
+    path: "/admin/login",
+    element: <Login />,
+    title: "Login",
   },
 ];
 

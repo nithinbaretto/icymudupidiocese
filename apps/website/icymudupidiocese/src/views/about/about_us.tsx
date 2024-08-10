@@ -190,11 +190,11 @@ export default function AboutUs() {
           </Box>
         </Box>
         <Typography variant="body1" fontWeight={600} mt={2}>
-          YOUTH COMMISSION VISION: Educated and united catholic youth for
+          Youth Commission Vision: Educated and united catholic youth for
           Christian leadership
         </Typography>
         <Typography variant="body1" fontWeight={600} mt={2}>
-          MISSION: To form catholic youth as value based leaders in the society.
+          Mission: To form catholic youth as value based leaders in the society.
           To motivate the youth to work for the development of the society.
         </Typography>
       </Box>

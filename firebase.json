@@ -4,6 +4,7 @@
   },
   "hosting": {
     "public": "public",
+    "site": "youthcommissionudupi-d8f1f-22122",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": [
       {

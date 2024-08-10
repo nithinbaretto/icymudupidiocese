@@ -29,7 +29,7 @@ export default function DexcoInformation(this: any) {
   let icym_dexco = [
     {
       id: 1,
-      img: "/images/godwin.jpg",
+      img: "/images/godwin.jpeg",
       name: "Godwin Mascarenhas",
       post: "President",
     },
@@ -154,7 +154,7 @@ export default function DexcoInformation(this: any) {
     },
     {
       id: 14,
-      img: "/images/cadence_latonia_dsouza.jpeg",
+      img: "/images/cadence.jpeg",
       name: "Cadence Latonia D’Souza",
       post: "Joint Secretary",
     },
@@ -198,15 +198,16 @@ export default function DexcoInformation(this: any) {
     },
     {
       id: 13,
-      img: "/images/flavian.jpg",
+      img: "/images/flavian.jpeg",
       name: "Flavian Mendonca",
-      post: "RT - EXCO",
+      post: "EXCO Member",
+      place: "YCS / YSM Karnataka Regional RT",
     },
     {
       id: 13,
-      img: "/images/anson_nazareth.jpg",
+      img: "/images/anson.jpeg",
       name: "Anson Nazareth",
-      post: "National President",
+      post: "YCS / YSM NATIONAL PRESIDENT",
     },
     {
       id: 7,
